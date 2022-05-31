@@ -18,10 +18,10 @@ class Controls{
                     this.right=true;
                     break;
                 case "ArrowUp":
-                    this.up=true;
+                    this.forward=true;
                     break
                 case "ArrowDown":
-                    this.down=true;
+                    this.reverse=true;
                     break;
             }
             console.table(this);
@@ -35,10 +35,10 @@ class Controls{
                     this.right=false;
                     break;
                 case "ArrowUp":
-                    this.up=false;
+                    this.forward=false;
                     break
                 case "ArrowDown":
-                    this.down=false;
+                    this.reverse=false;
                     break;
             }
             console.table(this);
