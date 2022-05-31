@@ -15,7 +15,7 @@ class Car{
 
     update(){
         if(this.controls.forward){
-            this.speed+=this.acceleraton;
+            this.speed+=this.acceleration;
         }
         if(this.controls.reverse){
             this.speed-=this.acceleration;
@@ -34,6 +34,19 @@ class Car{
         if(this.speed){
             this.speed+=this.friction;
         }
+
+        if(Math.abs(this.speed)<this.friction){
+            this.speed=0;
+        }
+
+        if(this.controls.left){
+            this.x-=2
+        }
+
+        if(this.controls.right){
+            this.x+=2
+        }
+
         this.y-=this.speed;
     }
 
